@@ -2,8 +2,6 @@ public class print {
 
 
     public static void main(String[] args) {
-        print p = new print();
-        p.printer();
         print myPrint = new print();
         myPrint.printer();
 
@@ -28,53 +26,62 @@ public class print {
                     int tt = c;
 
 
-                    int aa = a;
-                    int bb = b;
-                    int cc = c;
+//                    int aa = a;
+//                    int bb = b;
+//                    int cc = c;
 
 
 
-                    int T = aa + bb + cc;
+                  //  int T = aa + bb + cc;
 
 
                     System.out.println("The board is:  " + aaaa + " " + bbbb + " " + cccc);
                     System.out.println("possible boards are:");
-                    if (aaaa + bbbb + cccc <= 2) {
-                        System.out.println("best");
-                    }
 
 
-                    for (int l = 0; l <= z; l++) {
-                        if (aaaa + bbbb + cccc < T) {
+
+                    for (int l = 0; l < z; l++) {
+                        //if (aaaa + bbbb + cccc < T) {
+                        cccc--;
                             System.out.println(aaaa + " " + bbbb + " " + cccc);
                             if (aaaa + bbbb + cccc <= 1) {
                                 System.out.println("yessir");
                             }
-                        }
-                        cccc--;
+                            if (aaaa + bbbb + cccc-3l <=1){
+                                System.out.println("good move is above");
+                            }
+                       // }
+
 
                     }
 
+                    //changing middle col
 
-                    for (int j = 0; j <= y; j++) {
+                    for (int j = 0; j < y; j++) {
+                        bbbb--;
+//                        System.out.println("this is tt " +tt);
+//                        System.out.println("this is bbbb " +bbbb);
 
-                        if (tt > bbbb) {
+                        if (tt > bbbb) {//c> b
                             tt--;
 
                         }
-                        if (aaaa + bbbb + tt < T) {
-
+                      //  if (aaaa + bbbb + tt < T) {
+                        //bbbb--;
                             System.out.println(aaaa + " " + bbbb + " " + tt);
                             if (aaaa + bbbb + tt <= 1) {
                                 System.out.println("yessir");
                             }
-                        }
-                        bbbb--;
+                            if (aaaa + bbbb + cccc-3l <=1){
+                                System.out.println("no");
+                            }
+                      //  }
+
 
 
                     }
-                    for (int i = 1; i <= x; i++) {
-
+                    for (int i = 1; i < x; i++) {
+                        aaaa--;
                         if (r > aaaa) {
                             r--;
                         }
@@ -83,18 +90,20 @@ public class print {
                         }
 
 
-                        if (aaaa + r + t < T) {
+
+               //         if (aaaa + r + t < T) {
                             System.out.println(aaaa + " " + r + " " + t);
                             if (aaaa + r + t <= 1) {
                                 System.out.println("yessir");
                             }
-                        }
-                        aaaa--;
+                            if (aaaa + bbbb + cccc-3l <=1){
+                                System.out.println("no");
+                            }
+                    //    }
+
                     }
 
                 }
-
-
             }
         }
     }
